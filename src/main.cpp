@@ -5,7 +5,9 @@
 #include <bn_fixed_point.h>
 #include <bn_vector.h>
 
-#include "bn_sprite_items_dot.h"
+#include "bn_sprite_items_sheep.h"
+#include "bn_sprite_items_sleepy.h"
+
 
 #include "movement.h"
 
@@ -39,6 +41,11 @@ int main() {
             if(orbiters.size() > 0) {
                 orbiters.pop_back();
             }
+        }
+
+        //add a sheep restart button
+        if(bn::keypad::start_pressed()){
+            orbiters.clear();
         }
 
         center.update();
