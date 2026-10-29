@@ -1,4 +1,14 @@
 #include "center.h"
+#include "movement.h"
+#include "orbiter.h"
+
+#include "bn_sprite_items_dot.h"
+
+//Redefine the force scale in cpp
+// // A scaling factor by which to reduce the force applied when orbiting
+// // Important for numerical stability
+static constexpr bn::fixed FORCE_SCALE = 10;
+
 
 Orbiter::Orbiter(bn::fixed_point starting_location, bn::fixed_point starting_velocity, Center &center) :
         _sprite(bn::sprite_items::dot.create_sprite(starting_location)),

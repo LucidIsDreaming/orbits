@@ -14,7 +14,6 @@ bn::fixed_point Center::position(){
 
 void Center::update(){
     dPadMoveSprite(_sprite, _speed);
-
 };
 
 bn::fixed Center::mass() {
